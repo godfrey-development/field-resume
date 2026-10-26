@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Engineering Field Manual</title>
+<meta name="description" content="Practical AI, high voltage testing, infrastructure, and land development. Engineering field manual and project portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="frame" id="frame">
+  <span class="corner c-tl"></span><span class="corner c-tr"></span>
+  <span class="corner c-bl"></span><span class="corner c-br"></span>
+
+  <header class="hud-top">
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="rail">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16 M4 12h16 M4 17h10"/></svg>
+    </button>
+    <div class="manual">
+      <h1>Engineering Field Manual</h1>
+      <p>Practical AI · Systems Engineering · Infrastructure<br>Land Development · Analytics · Project Management</p>
+    </div>
+    <nav class="tabs" aria-label="Primary">
+      <a href="#entries" class="active"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5z M8 8h8 M8 12h8 M8 16h5"/></svg>Field Entries</a>
+      <a href="#about"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v1 M12 11v5"/></svg>About</a>
+      <a href="#resume"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z M14 3v4h4 M10 12h6 M10 16h6"/></svg>Resume</a>
+      <a href="#contact"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z M4 7l8 6 8-6"/></svg>Contact</a>
+    </nav>
+    <div class="status">
+      <div class="stat state"><span class="k">Status</span><span class="v blink">Under Maintenance</span></div>
+      <!-- DEV: layout readout, remove before publishing -->
+      <div class="stat"><span class="k">Layout</span><span class="v" id="vp">Desktop</span></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="scrim" id="scrim"></div>
+    <aside class="rail" id="rail" aria-label="Field entry navigation">
+      <div class="rail-inner">
+        <button class="rail-toggle" id="railToggle" aria-expanded="false" aria-controls="rail">
+          <span class="lbl">Collapse</span><span class="chev">»</span>
+        </button>
+        <ul class="rail-nav">
+          <li><a href="#e-land" title="01 Land Development"><svg viewBox="0 0 24 24"><path d="M3 18l6-7 4 4 3-3 5 6z M3 18h18"/></svg><span class="n">01</span><span class="t">Land Dev</span></a></li>
+          <li><a href="#e-hv" title="02 High Voltage Testing"><svg viewBox="0 0 24 24"><path d="M13 3 L6 13h5l-1 8 7-10h-5z"/></svg><span class="n">02</span><span class="t">High Voltage</span></a></li>
+          <li><a href="#e-ai" title="03 AI Systems"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10"/><path d="M10 7V4 M14 7V4 M10 20v-3 M14 20v-3 M7 10H4 M7 14H4 M20 10h-3 M20 14h-3"/></svg><span class="n">03</span><span class="t">AI Systems</span></a></li>
+          <li><a href="#e-ops" title="04 Field Ops"><svg viewBox="0 0 24 24"><path d="M4 10a12 12 0 0 1 16 0 M7 14a8 8 0 0 1 10 0"/><circle cx="12" cy="18" r="1.5"/></svg><span class="n">04</span><span class="t">Field Ops</span></a></li>
+          <li><a href="#e-rep" title="05 Repair &amp; Renovations"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span class="n">05</span><span class="t">Repair/Reno</span></a></li>
+          <li class="rail-sep" aria-hidden="true"></li>
+          <li><a href="#about" title="About"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v1 M12 11v5"/></svg><span class="t">About</span></a></li>
+          <li><a href="#resume" title="Resume"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z M14 3v4h4 M10 12h6 M10 16h6"/></svg><span class="t">Resume</span></a></li>
+          <li><a href="#contact" title="Contact"><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z M4 7l8 6 8-6"/></svg><span class="t">Contact</span></a></li>
+        </ul>
+        <div class="side-panel">
+          <h2>Operational Capabilities</h2>
+          <ul class="cap-list">
+            <li>Artificial Intelligence</li><li>Mechanical Engineering</li><li>Electrical Systems</li><li>High Voltage Testing</li>
+            <li>Land Development</li><li>GIS &amp; Surveying</li><li>Project Management</li><li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main" id="entries">
+
+      <!-- 01 LAND DEVELOPMENT -->
+      <article class="entry" id="e-land">
+        <div class="entry-grid">
+          <div class="eg-col id-col">
+            <span class="fe-label">Field Entry</span>
+            <div class="num-row"><span class="num">01</span><h3>Land Development</h3></div>
+            <p class="tags">Site Design · Grading<br>Ecology · Infrastructure</p>
+            <button class="view-btn" aria-expanded="false" aria-controls="d-land">View Entry <span class="arrow">→</span></button>
+          </div>
+          <div class="eg-col media-col main-photo"><img src="img/land-development/excavator.webp" alt="Volvo excavator grading a residential subdivision site"></div>
+          <div class="eg-col overview">
+            <div class="col-h">Overview</div>
+            <p>End-to-end residential land development — lender-grade cost estimation, civil plan sets, utility routing, and live budget control from ground-break to delivery.</p>
+            <button class="expand-toggle" aria-expanded="false" aria-controls="d-land">Expand Details <span class="pm">+</span></button>
+          </div>
+          <div class="eg-col media-col side"><img src="img/land-development/utility-trench.webp" alt="Utility trench with buried water line marking tape"></div>
+        </div>
+        <div class="details" id="d-land"><div class="d-clip"><div class="d-body">
+          <div class="d-cols">
+            <div><div class="col-h">Technologies</div>
+              <ul class="plain-list"><li>Pre-Construction Estimation</li><li>Civil &amp; Site Plan Sets</li><li>Grading &amp; Drainage</li><li>Utility Installation</li><li>Permitting &amp; Code Compliance</li></ul></div>
+            <div><div class="col-h">Capabilities</div>
+              <ul class="cap-icons">
+                <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/><path d="M4 10h16 M10 10v10"/></svg>Site Planning</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 18l6-6 4 3 6-8"/></svg>Grading &amp; Drainage</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 4c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg>Water Management</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 20V10 M12 10c0-4 3-6 7-6 0 4-3 6-7 6zm0 0c0-3-2-5-6-5 0 3 2 5 6 5z"/></svg>Ecological Restoration</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 20h16 M6 20V9l6-5 6 5v11 M10 20v-6h4v6"/></svg>Infrastructure Design</li>
+              </ul></div>
+            <div class="notes-col"><div class="col-h">Field Notes</div>
+              <ul class="notes">
+                <li><strong>10-acre, 11-lot subdivision</strong> budgeted in full before ground-break; financing secured through lender-scrutinized cost estimation.</li>
+                <li>Directed licensed engineers on complete civil and site plan sets; reviewed for constructability, cost, and code.</li>
+                <li>Planned and oversaw complete utility installation across the subdivision.</li>
+                <li>Live budget monitoring during construction — scope and procurement adjusted to protect margins. <strong>Both most recent projects completed profitably.</strong></li>
+                <li>Coordinated engineers, subcontractors, investors, and city/state officials through permitting, inspection, and delivery.</li>
+              </ul></div>
+          </div>
+          <div><div class="col-h">Field Photos</div>
+            <div class="strip">
+              <figure><button data-lb><img src="img/land-development/roadway-tie-in.webp" alt="Crew placing concrete at a roadway utility tie-in" loading="lazy"></button><figcaption>Roadway utility tie-in</figcaption></figure>
+              <figure class="narrow-only"><button data-lb><img src="img/land-development/utility-trench.webp" alt="Utility trench with buried water line marking tape" loading="lazy"></button><figcaption>Water line trench</figcaption></figure>
+              <figure><button data-lb><img src="img/land-development/excavator.webp" alt="Volvo excavator grading a residential subdivision site" loading="lazy"></button><figcaption>Mass grading</figcaption></figure>
+            </div></div>
+        </div></div></div>
+      </article>
+
+      <!-- 02 HIGH VOLTAGE -->
+      <article class="entry" id="e-hv">
+        <div class="entry-grid">
+          <div class="eg-col id-col">
+            <span class="fe-label">Field Entry</span>
+            <div class="num-row"><span class="num">02</span><h3>High Voltage Testing</h3></div>
+            <p class="tags">Equipment Testing · Diagnostics<br>Commissioning · Safety</p>
+            <button class="view-btn" aria-expanded="false" aria-controls="d-hv">View Entry <span class="arrow">→</span></button>
+          </div>
+          <div class="eg-col media-col main-photo"><img src="img/hv-testing/substation.webp" alt="Substation transformer testing site"></div>
+          <div class="eg-col overview">
+            <div class="col-h">Overview</div>
+            <p>High voltage testing and commissioning for power systems, substations, and industrial electrical infrastructure — 480 V to 500 kV.</p>
+            <button class="expand-toggle" aria-expanded="false" aria-controls="d-hv">Expand Details <span class="pm">+</span></button>
+          </div>
+          <div class="eg-col media-col side"><img src="img/hv-testing/test-yard.webp" alt="High voltage test equipment staged in a substation yard"></div>
+        </div>
+        <div class="details" id="d-hv"><div class="d-clip"><div class="d-body">
+          <div class="d-cols">
+            <div><div class="col-h">Technologies</div>
+              <ul class="plain-list"><li>AC/DC Hipot Testing</li><li>Partial Discharge</li><li>Insulation Resistance</li><li>Relay Testing</li><li>Power Quality Analysis</li></ul></div>
+            <div><div class="col-h">Capabilities</div>
+              <ul class="cap-icons">
+                <li><svg viewBox="0 0 24 24"><path d="M13 3 L6 13h5l-1 8 7-10h-5z"/></svg>Equipment Testing</li>
+                <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12l4-3"/></svg>Diagnostics</li>
+                <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4 10-10"/></svg>Commissioning</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4-4 7-8 8-4-1-8-4-8-8V7z"/></svg>Safety Compliance</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 18 L10 10l4 4 6-9 M4 18h16"/></svg>Failure Analysis</li>
+              </ul></div>
+            <div class="notes-col"><div class="col-h">Field Notes</div>
+              <ul class="notes">
+                <li>Tested and commissioned <strong>hundreds of skid-mounted substations</strong> powering solar arrays nationwide — every component verified from array to interconnection.</li>
+                <li>Operated and tested high-voltage equipment and substations from <strong>480 V to 500 kV</strong> serving cities, factories, and generation plants.</li>
+                <li>Federal project at the <strong>Hoover Dam</strong>: replacement of the 30 kV turbine buss and breaker assemblies on four power generation turbines.</li>
+                <li>Reviewed site plans and engineering drawings to design safe shutdown and testing procedures at new sites across the country.</li>
+                <li>Field engineering 2016–2019, based Nashville with nationwide travel.</li>
+              </ul></div>
+          </div>
+          <div><div class="col-h">Field Photos</div>
+            <div class="strip">
+              <figure><button data-lb><img src="img/hv-testing/hoover-dam.webp" alt="Turbine hall at the Hoover Dam" loading="lazy"></button><figcaption>Hoover Dam · 30 kV buss</figcaption></figure>
+              <figure class="narrow-only"><button data-lb><img src="img/hv-testing/test-yard.webp" alt="High voltage test equipment staged in a substation yard" loading="lazy"></button><figcaption>Test equipment staging</figcaption></figure>
+              <figure><button data-lb><img src="img/hv-testing/substation.webp" alt="Substation transformer testing site" loading="lazy"></button><figcaption>Transformer testing</figcaption></figure>
+            </div></div>
+        </div></div></div>
+      </article>
+
+      <!-- 03 AI SYSTEMS -->
+      <article class="entry" id="e-ai">
+        <div class="entry-grid">
+          <div class="eg-col id-col">
+            <span class="fe-label">Field Entry</span>
+            <div class="num-row"><span class="num">03</span><h3>AI Systems</h3></div>
+            <p class="tags">Local AI · RAG · Speech<br>Vector DB · AI Pipelines</p>
+            <button class="view-btn" aria-expanded="false" aria-controls="d-ai">View Entry <span class="arrow">→</span></button>
+          </div>
+          <div class="eg-col media-col main-photo"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 230 170"><g fill="none" stroke="#2A2314" stroke-width="1.3" font-family="IBM Plex Mono" font-size="8">
+              <circle cx="24" cy="30" r="8"/><path d="M24 40v8 M14 58h20"/><text x="12" y="16" fill="#2A2314" stroke="none">USER</text>
+              <path d="M40 30h34"/><path d="M70 26l6 4-6 4"/><text x="44" y="24" fill="#2A2314" stroke="none">QUERY</text>
+              <rect x="82" y="16" width="52" height="28" fill="rgba(42,35,20,0.06)"/><text x="88" y="34" fill="#2A2314" stroke="none">PROMPT</text>
+              <path d="M134 30h34"/><path d="M164 26l6 4-6 4"/>
+              <rect x="176" y="16" width="42" height="28" fill="#2A2314"/><text x="185" y="34" fill="#E9DFC6" stroke="none">LLM</text>
+              <rect x="82" y="80" width="60" height="26"/><text x="90" y="97" fill="#2A2314" stroke="none">RAG PIPE</text>
+              <path d="M108 44v36 M108 60l-4-5 M108 60l4-5"/>
+              <ellipse cx="197" cy="92" rx="21" ry="8"/><path d="M176 92v22c0 4 9 8 21 8s21-4 21-8V92"/><path d="M197 44v38"/>
+              <text x="170" y="140" fill="#2A2314" stroke="none">VECTOR DB</text>
+              <path d="M142 93h32"/><path d="M170 89l6 4-6 4"/>
+            </g></svg></div><span class="cap">Placeholder · rig photo</span></div>
+          <div class="eg-col overview">
+            <div class="col-h">Overview</div>
+            <p>Local large language model systems with RAG pipelines and vector search, deployed on edge hardware — built from first principles, no framework wrappers.</p>
+            <button class="expand-toggle" aria-expanded="false" aria-controls="d-ai">Expand Details <span class="pm">+</span></button>
+          </div>
+          <div class="eg-col media-col side"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 150 150"><g fill="none" stroke="#2A2314" stroke-width="1.4">
+              <rect x="50" y="50" width="50" height="50" fill="rgba(42,35,20,0.06)"/><rect x="60" y="60" width="30" height="30"/>
+              <path d="M55 50V36 M65 50V30 M75 50V33 M85 50V30 M95 50V36 M55 100v14 M65 100v20 M75 100v17 M85 100v20 M95 100v14 M50 55H36 M50 65H30 M50 75H33 M50 85H30 M50 95H36 M100 55h14 M100 65h20 M100 75h17 M100 85h20 M100 95h14"/>
+              <circle cx="65" cy="30" r="2.5"/><circle cx="85" cy="30" r="2.5"/><circle cx="30" cy="65" r="2.5"/><circle cx="120" cy="85" r="2.5"/><circle cx="65" cy="120" r="2.5"/><circle cx="85" cy="120" r="2.5"/>
+              <path d="M60 75h10 M70 70v10" stroke-width="1.1"/><path d="M78 68l8 8-8 8" stroke-width="1.1"/>
+            </g></svg></div><span class="cap">Placeholder · screenshot</span></div>
+        </div>
+        <div class="details" id="d-ai"><div class="d-clip"><div class="d-body">
+          <div class="d-cols">
+            <div><div class="col-h">Technologies</div>
+              <ul class="plain-list"><li>Local LLM Inference (Multi-Model)</li><li>FAISS Vector Search</li><li>Dense Embeddings</li><li>Python · Multi-GPU</li><li>TTS / STT Speech ML</li></ul></div>
+            <div><div class="col-h">Capabilities</div>
+              <ul class="cap-icons">
+                <li><svg viewBox="0 0 24 24"><path d="M4 12h4l2-5 3 10 2-5h5"/></svg>Natural Language Processing</li>
+                <li><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/></svg>Knowledge Retrieval</li>
+                <li><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0 M12 18v3"/></svg>Speech Integration</li>
+                <li><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12"/><path d="M8 10l3 2-3 2 M13 14h4"/></svg>Local Inference</li>
+                <li><svg viewBox="0 0 24 24"><path d="M5 5h14 M5 12h14 M5 19h14 M8 5v14"/></svg>Data Pipelines</li>
+              </ul></div>
+            <div class="notes-col"><div class="col-h">Field Notes</div>
+              <ul class="notes">
+                <li>Fully offline, multi-model LLM platform for construction-industry use: plan-set recall, project coordination, document management.</li>
+                <li>Custom RAG pipeline from first principles — dense embeddings, FAISS vector search, multi-pass LLM document enrichment.</li>
+                <li>Daily structured evaluation of AI output — diagnosing hallucination, context contamination, and instruction-compliance failures at the systems level.</li>
+                <li>Prompt-assembly, session-memory, and structured-output classification pipelines.</li>
+                <li>Multi-GPU inference infrastructure with TTS/STT speech integration.</li>
+              </ul></div>
+          </div>
+          <div><div class="col-h">Field Photos</div><p class="strip-empty">Photo slot · hardware rig, UI screenshots, pipeline diagrams</p></div>
+        </div></div></div>
+      </article>
+
+      <!-- 04 FIELD OPS -->
+      <article class="entry" id="e-ops">
+        <div class="entry-grid">
+          <div class="eg-col id-col">
+            <span class="fe-label">Field Entry</span>
+            <div class="num-row"><span class="num">04</span><h3>Field Ops &amp; Infrastructure</h3></div>
+            <p class="tags">Power Systems · Networks<br>Deployments · Security</p>
+            <button class="view-btn" aria-expanded="false" aria-controls="d-ops">View Entry <span class="arrow">→</span></button>
+          </div>
+          <div class="eg-col media-col main-photo"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 230 170"><g fill="none" stroke="#2A2314" stroke-width="1.3" font-family="IBM Plex Mono" font-size="8">
+              <path d="M14 40 L60 60 L120 44 L188 62 L216 50" stroke-width="1"/>
+              <circle cx="34" cy="26" r="7"/><path d="M34 15v-4 M43 19l3-3 M25 19l-3-3"/>
+              <path d="M22 96 L58 88 L62 106 L26 114 Z" fill="rgba(42,35,20,0.06)"/><path d="M40 110v14 M32 124h18"/>
+              <text x="14" y="150" fill="#2A2314" stroke="none">POWER</text>
+              <rect x="100" y="96" width="36" height="18"/><path d="M108 96v-8 M128 96v-12"/>
+              <text x="98" y="150" fill="#2A2314" stroke="none">NETWORK</text>
+              <path d="M178 92h26v14h-26z M178 96l-10 4 10 4"/><circle cx="196" cy="99" r="3"/>
+              <text x="172" y="150" fill="#2A2314" stroke="none">SECURITY</text>
+              <path d="M64 102 H96" stroke-dasharray="4 3"/><path d="M138 104 H166" stroke-dasharray="4 3"/>
+            </g></svg></div><span class="cap">Placeholder · site photo</span></div>
+          <div class="eg-col overview">
+            <div class="col-h">Overview</div>
+            <p>Field operations and infrastructure deployments including power systems, communications, and remote site security.</p>
+            <button class="expand-toggle" aria-expanded="false" aria-controls="d-ops">Expand Details <span class="pm">+</span></button>
+          </div>
+          <div class="eg-col media-col side"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 150 150"><g fill="none" stroke="#2A2314" stroke-width="1.4">
+              <path d="M40 46 L104 30 L112 62 L48 78 Z" fill="rgba(42,35,20,0.06)"/>
+              <path d="M56 42 L60 58 M72 38 L76 54 M88 34 L92 50 M46 60 L108 46"/>
+              <path d="M76 78 L76 112 M60 112 H92"/><path d="M64 78 L56 112 M88 74 L96 112"/>
+              <circle cx="124" cy="24" r="7"/><path d="M124 13v-4 M133 17l3-3 M115 17l-3-3"/>
+            </g></svg></div><span class="cap">Placeholder · equipment</span></div>
+        </div>
+        <div class="details" id="d-ops"><div class="d-clip"><div class="d-body">
+          <div class="d-cols">
+            <div><div class="col-h">Technologies</div>
+              <ul class="plain-list"><li>Solar Power Systems</li><li>Starlink · LTE/5G</li><li>Networking · VPN</li><li>Security Cameras</li><li>Remote Monitoring</li></ul></div>
+            <div><div class="col-h">Capabilities</div>
+              <ul class="cap-icons">
+                <li><svg viewBox="0 0 24 24"><path d="M12 3v3 M12 18v3 M3 12h3 M18 12h3 M6 6l2 2 M16 16l2 2 M18 6l-2 2 M8 16l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg>Power Autonomy</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 10a12 12 0 0 1 16 0 M7 14a8 8 0 0 1 10 0"/><circle cx="12" cy="18" r="1.5"/></svg>Communications</li>
+                <li><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="11"/><path d="M9 20h6"/></svg>Remote Monitoring</li>
+                <li><svg viewBox="0 0 24 24"><rect x="6" y="10" width="12" height="9"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Site Security</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 17l5-9 4 6 3-4 4 7z"/></svg>Environment Hardened</li>
+              </ul></div>
+            <div class="notes-col"><div class="col-h">Field Notes</div>
+              <ul class="notes">
+                <li>Off-grid power design — solar generation with battery storage sized for continuous remote operation.</li>
+                <li>Multi-path communications: satellite primary with LTE/5G failover, VPN-secured remote access.</li>
+                <li>Remote monitoring and security camera deployments hardened for exposed environments.</li>
+                <li>Roots in heavy fieldwork: industrial pump systems, wiring, creek design, dam construction, and site lighting (2012–2015).</li>
+                <li>Heavy equipment operation — lull, backhoe, skid steer.</li>
+              </ul></div>
+          </div>
+          <div><div class="col-h">Field Photos</div><p class="strip-empty">Photo slot · solar array, comms mast, camera deployments</p></div>
+        </div></div></div>
+      </article>
+
+      <!-- 05 REPAIR & RENOVATIONS -->
+      <article class="entry" id="e-rep">
+        <div class="entry-grid">
+          <div class="eg-col id-col">
+            <span class="fe-label">Field Entry</span>
+            <div class="num-row"><span class="num">05</span><h3>Repair &amp; Renovations</h3></div>
+            <p class="tags">Structural · Mechanical · Electrical · Diagnostics<br>Restoration · Recovery · Retrofit</p>
+            <button class="view-btn" aria-expanded="false" aria-controls="d-rep">View Entry <span class="arrow">→</span></button>
+          </div>
+          <div class="eg-col media-col main-photo"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 230 170"><g fill="none" stroke="#2A2314" stroke-width="1.3" font-family="IBM Plex Mono" font-size="8">
+              <path d="M40 120 L115 60 L190 120 Z M60 120 V80 H170 V120 Z" stroke-width="1"/>
+              <path d="M115 60 V40 M100 40 H130" stroke-dasharray="4 3"/>
+              <path d="M80 120 V100 H90 V120 Z" fill="rgba(42,35,20,0.1)"/>
+              <path d="M140 120 V100 H150 V120 Z" fill="rgba(42,35,20,0.1)"/>
+              <path d="M115 120 V80 H125 V120 Z" fill="rgba(42,35,20,0.1)"/>
+              <path d="M110 70 L120 80 M110 80 L120 70" stroke-width="1.5"/>
+              <text x="55" y="150" fill="#2A2314" stroke="none">STRUCTURAL</text>
+              <text x="140" y="150" fill="#2A2314" stroke="none">SYSTEMS</text>
+            </g></svg></div><span class="cap">Placeholder · 1930s renovation</span></div>
+          <div class="eg-col overview">
+            <div class="col-h">Overview</div>
+            <p>Broad-spectrum repair and renovation operations covering structural diagnostics, mechanical systems, and electronic recovery. Utilizes cross-disciplinary engineering principles to restore functionality and extend asset lifespan across residential, vehicular, and industrial applications.</p>
+            <button class="expand-toggle" aria-expanded="false" aria-controls="d-rep">Expand Details <span class="pm">+</span></button>
+          </div>
+          <div class="eg-col media-col side"><div class="illo" aria-hidden="true">
+            <svg viewBox="0 0 150 150"><g fill="none" stroke="#2A2314" stroke-width="1.4">
+              <circle cx="75" cy="75" r="22" fill="rgba(42,35,20,0.06)"/><circle cx="75" cy="75" r="8"/>
+              <path d="M75 45v-12 M75 105v12 M45 75H33 M105 75h12 M54 54l-8-8 M96 96l8 8 M96 54l8-8 M54 96l-8 8"/>
+              <path d="M30 128h90 M40 128v-8h70v8" stroke-width="1.1"/>
+            </g></svg></div><span class="cap">Placeholder · engine rebuild</span></div>
+        </div>
+        <div class="details" id="d-rep"><div class="d-clip"><div class="d-body">
+          <div class="d-cols">
+            <div><div class="col-h">Technologies</div>
+              <ul class="plain-list">
+                <li>Structural Diagnostics &amp; Stabilization</li>
+                <li>Mechanical &amp; Small Engine Repair</li>
+                <li>Residential Systems (Framing, Plumbing, HVAC)</li>
+                <li>Electronics &amp; Circuit Recovery</li>
+                <li>Vehicle &amp; Tool Maintenance</li>
+              </ul></div>
+            <div><div class="col-h">Capabilities</div>
+              <ul class="cap-icons">
+                <li><svg viewBox="0 0 24 24"><path d="M3 21h18 M5 21V10l7-6 7 6v11 M9 21v-6h6v6"/></svg>Load Path Stabilization</li>
+                <li><svg viewBox="0 0 24 24"><path d="M12 4c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg>Plumbing &amp; HVAC Troubleshooting</li>
+                <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3 M12 18v3 M3 12h3 M18 12h3 M6 6l2 2 M16 16l2 2 M18 6l-2 2 M8 16l-2 2"/></svg>Small Engine Rebuilds</li>
+                <li><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10"/><path d="M10 7V4 M14 7V4 M10 20v-3 M14 20v-3 M7 10H4 M7 14H4 M20 10h-3 M20 14h-3"/></svg>Electronic Component Replacement</li>
+                <li><svg viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0-5 5L4 16v4h4l5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg>Tool &amp; Vehicle Diagnostics</li>
+                <li><svg viewBox="0 0 24 24"><path d="M4 20V4h5v11h11v5z M7 7h2 M7 10h2 M12 17v-2 M15 17v-2"/></svg>Custom Fixtures</li>
+              </ul></div>
+            <div class="notes-col"><div class="col-h">Field Notes</div>
+              <ul class="notes">
+                <li><strong>1930s Renovation Showcase:</strong> Full gut renovation of 1930s residence; structural framing, electrical, plumbing, and HVAC installed; property flipped for profit.</li>
+                <li><strong>Structural &amp; Home Repair:</strong> Diagnosed and corrected framing sag and foundation settling in residential properties; reinforced load-bearing structures.</li>
+                <li><strong>Mechanical &amp; Vehicle:</strong> Performed complete small engine overhauls and vehicle drivetrain diagnostics; restored operational life to legacy equipment.</li>
+                <li><strong>Electronics &amp; Tools:</strong> Component-level repair on power tools and control boards; replaced failed circuitry and sensors to restore functionality.</li>
+                <li><strong>Systems Integration:</strong> Upgraded legacy home plumbing and HVAC systems to modern efficiency standards without compromising original structural integrity.</li>
+              </ul></div>
+          </div>
+          <div><div class="col-h">Field Photos</div><p class="strip-empty">Photo slot · structural repair, mechanical rebuild, electronics, 1930s renovation</p></div>
+        </div></div></div>
+      </article>
+
+      <div class="lower">
+        <article class="entry" id="about"><div class="pad">
+          <span class="fe-label">Reference A-01</span>
+          <h3>About the Operator</h3>
+          <p>Operator profile is classified pending release. A full background is available on request once the secure contact channel is online.</p>
+        </div></article>
+        <article class="entry" id="resume"><div class="pad">
+          <span class="fe-label">Reference A-02</span>
+          <h3>Record of Work</h3>
+          <p>Full record of work is available on request. The field entries above document the projects in detail.</p>
+        </div></article>
+        <article class="entry" id="contact"><div class="pad">
+          <span class="fe-label">Reference A-03</span>
+          <h3>Establish Contact</h3>
+          <p>A secure contact channel is in development. Direct contact details are not published on this site.</p>
+        </div></article>
+      </div>
+    </main>
+  </div>
+
+  <footer class="hud-bottom">
+    <p class="quote">"Knowledge is the edge."</p>
+    <span class="sig">Engineering Field Manual ◆</span>
+  </footer>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <img id="lbImg" alt="">
+  <div class="lb-bar"><span id="lbCap"></span><button id="lbClose">Close ✕</button></div>
+</dialog>
+</body>
+</html>

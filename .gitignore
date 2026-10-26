@@ -1,0 +1,10 @@
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# never commit raw photos or personal files
+*.raw
+*.heic
+*.CR2
+*.NEF
