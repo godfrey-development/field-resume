@@ -19,10 +19,10 @@
     body.classList.toggle('rail-open', open);
     railToggle.setAttribute('aria-expanded', open);
     railToggle.querySelector('.lbl').textContent = open ? 'Collapse' : '';
-    try{ localStorage.setItem('aranix-rail', open ? '1' : '0'); }catch(e){}
+    try{ localStorage.setItem('fm-rail', open ? '1' : '0'); }catch(e){}
   }
   let saved = null;
-  try{ saved = localStorage.getItem('aranix-rail'); }catch(e){}
+  try{ saved = localStorage.getItem('fm-rail'); }catch(e){}
   setRail(saved === '1');
   railToggle.addEventListener('click', ()=>setRail(!body.classList.contains('rail-open')));
 
@@ -35,14 +35,8 @@
   document.querySelectorAll('.rail-nav a').forEach(a=>a.addEventListener('click', ()=>setDrawer(false)));
   document.addEventListener('keydown', e=>{ if(e.key === 'Escape') setDrawer(false); });
 
-  // ---- live layout readout so resizing shows which breakpoint is active ----
-  const vp = document.getElementById('vp');
-  function readout(){
-    const w = window.innerWidth;
-    vp.textContent = (w <= 640 ? 'Phone' : w <= 860 ? 'Tablet S' : w <= 1180 ? 'Tablet' : 'Desktop') + ' ' + w;
-    if(w > 860) setDrawer(false);
-  }
-  window.addEventListener('resize', readout); readout();
+  // ---- close the slide-out menu if the window is widened past phone/tablet size ----
+  window.addEventListener('resize', ()=>{ if(window.innerWidth > 860) setDrawer(false); });
 
   // ---- lightbox for field photos ----
   const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
